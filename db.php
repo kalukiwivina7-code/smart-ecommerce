@@ -1,21 +1,18 @@
-<?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "smart_ecommerce";
+<<?php
 
 $conn = mysqli_connect(
-    $servername,
-    $username,
-    $password,
-    $dbname
+"localhost",
+"root",
+"",
+"week5db"
 );
 
-if (!$conn) {
-    die("Connection Failed: " . mysqli_connect_error());
+if(!$conn){
+
+die("Connection Failed");
+
 }
 
-echo "Database Connected Successfully";
+echo "Connected Successfully";
 
 ?>
