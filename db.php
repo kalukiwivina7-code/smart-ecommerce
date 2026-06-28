@@ -1,18 +1,20 @@
-<<?php
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $conn = mysqli_connect(
 "localhost",
 "root",
 "",
-"week5db"
+"week7db"
 );
 
 if(!$conn){
-
-die("Connection Failed");
-
+    die("<strong>Fatal Error: Database connection failed!</strong><br>Error: " . mysqli_connect_error() . "<br><br>Please make sure:
+    <ul>
+        <li>MySQL is running in XAMPP</li>
+    
+?>    <li>Database 'week7db' exists</li>
+    </ul>");
 }
-
-echo "Connected Successfully";
-
-?>
